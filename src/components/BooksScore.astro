@@ -1,0 +1,9 @@
+---
+import { SCORE_API_BUTTON } from "astro:env/server"
+
+const resp = await fetch(SCORE_API_BUTTON)
+const scoreValue = await resp.text()
+---
+<span class="text-xs " id="score">
+    Puntuación {scoreValue}/5
+</span>
